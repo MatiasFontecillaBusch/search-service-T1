@@ -2,10 +2,9 @@ import { model, Schema } from 'mongoose';
 
 const subjectSchema = new Schema({
   _id: {
-    type: String,
+    type: Schema.Types.UUID,
     required: true,
-    unique: true,
-    inmutable: true,
+    immutable: true,
   },
   name: {
     type: String,
