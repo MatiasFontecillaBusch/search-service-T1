@@ -3,7 +3,7 @@ import { model, Schema } from 'mongoose';
 
 const restrictionSchema = new Schema({
   _id: {
-    type: Schema.Types.UUID,
+    type: String,
     required: true,
     immutable: true,
   },

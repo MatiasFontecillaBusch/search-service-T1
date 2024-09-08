@@ -7,6 +7,10 @@ import compression from 'compression';
 import morgan from 'morgan';
 import AppError from '#utils/appErrors.js';
 import globalErrorMiddleware from '#middleware/globalErrorMiddleware.js';
+import studentsRouter from '#routes/studentsRoutes.js';
+import subjectsRouter from '#routes/subjectsRoutes.js';
+import restrictionsRouter from '#routes/restrictionsRoutes.js';
+import gradesRouter from '#routes/gradesRoutes.js';
 
 const app = express();
 
@@ -45,6 +49,11 @@ app.use(compression());
 app.get('/', (req, res) => {
   res.status(200).send('OK');
 });
+
+app.use('/students', studentsRouter);
+app.use('/grades', gradesRouter);
+app.use('/subjects', subjectsRouter);
+app.use('/restrictions', restrictionsRouter);
 
 app.all('*', (req, res, next) => {
   next(

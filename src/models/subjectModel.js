@@ -2,7 +2,7 @@ import { model, Schema } from 'mongoose';
 
 const subjectSchema = new Schema({
   _id: {
-    type: Schema.Types.UUID,
+    type: String,
     required: true,
     immutable: true,
   },
