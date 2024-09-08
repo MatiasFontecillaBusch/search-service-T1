@@ -5,7 +5,7 @@ export default (Model, validPaths = []) =>
   catchAsync(async (req, res, next) => {
     const filter = {};
 
-    const features = new APIFeatures(Model.find(filter), req.query)
+    const features = new APIFeatures(Model.find(filter).lean(), req.query)
       .filter(Model.numericFields ? Model.numericFields() : [])
       .sort()
       .populate(validPaths)

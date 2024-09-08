@@ -9,7 +9,8 @@
     "dev": "nodemon server.js",
     "parcel": "parcel server.js",
     "start:prod": "NODE_ENV=production nodemon server.js",
-    "seed": "node ./src/seeders/seeder.js"
+    "seed": "node ./src/seeders/seeder.js",
+    "uuid": "node ./src/utils/convertRestrictionsToUUID.js"
   },
   "repository": {
     "type": "git",

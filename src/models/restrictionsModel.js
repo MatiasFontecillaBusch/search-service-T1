@@ -20,5 +20,14 @@ const restrictionSchema = new Schema({
   },
 });
 
+restrictionSchema.virtual('students', {
+  ref: 'students',
+  localField: '_id',
+  foreignField: 'restrictions',
+});
+
+restrictionSchema.set('toObject', { virtuals: true });
+restrictionSchema.set('toJSON', { virtuals: true });
+
 const Restrictions = model('restrictions', restrictionSchema);
 export default Restrictions;
