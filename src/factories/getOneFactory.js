@@ -3,7 +3,7 @@ import catchAsync from '#utils/catchAsync.js';
 
 export default (Model, popOptions) =>
   catchAsync(async (req, res, next) => {
-    let query = Model.findById(req.params.id);
+    let query = Model.findById(req.params.id).lean();
     if (popOptions) query = query.populate(popOptions);
     const doc = await query;
 

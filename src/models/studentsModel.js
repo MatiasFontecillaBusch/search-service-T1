@@ -26,5 +26,11 @@ const studentSchema = new Schema({
   ],
 });
 
+studentSchema.virtual('grades', {
+  ref: 'grades',
+  localField: '_id',
+  foreignField: 'student',
+});
+
 const Students = model('students', studentSchema);
 export default Students;
