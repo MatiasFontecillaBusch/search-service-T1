@@ -13,7 +13,7 @@ const restrictionSchema = new Schema({
     immutable: true,
     unique: true,
   },
-  restrictionReason: String,
+  restrictionReason: { type: String, unique: true },
   createdAt: {
     type: Date,
     default: Date.now,
@@ -25,9 +25,6 @@ restrictionSchema.virtual('students', {
   localField: '_id',
   foreignField: 'restrictions',
 });
-
-restrictionSchema.set('toObject', { virtuals: true });
-restrictionSchema.set('toJSON', { virtuals: true });
 
 const Restrictions = model('restrictions', restrictionSchema);
 export default Restrictions;
