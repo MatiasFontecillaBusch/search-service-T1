@@ -1,0 +1,16 @@
+_id,name,lastName,email,restrictionsIds
+397b4245-0ceb-495f-8f88-90de638922f3,Alexander,Clifton,aclifton0@furl.net,"[""f5b6d093-d8f3-4ac6-8e50-bd2350871ee2"",""1de585e0-81fc-4663-adfe-59d63d28c0cb"",""8954fd2a-43fb-4e5f-bb90-480ec7a0fd71""]"
+611b06d6-f638-4264-9a94-4ddb42195c88,Keeley,Cain,kcain1@dot.gov,"[""46a221f4-1184-48dd-88f8-eeb91ef78f16"",""1de585e0-81fc-4663-adfe-59d63d28c0cb""]"
+ae1d4ef5-5cda-4498-9eba-1304b24dc9a3,Lanni,Bassett,lbassett2@whitehouse.gov,"[""1de585e0-81fc-4663-adfe-59d63d28c0cb"",""c2bc8b07-ec35-44fc-b9ee-10f6ccfdf96a""]"
+1ed73c1a-e6a8-43a5-b7a0-e3b3c5b3ec7e,Breanne,Syde,bsyde3@answers.com,"[""8954fd2a-43fb-4e5f-bb90-480ec7a0fd71"",""f5b6d093-d8f3-4ac6-8e50-bd2350871ee2"",""1de585e0-81fc-4663-adfe-59d63d28c0cb""]"
+67f6ed80-7843-4254-a58e-c3075dcdd12c,Blake,Cardenoza,bcardenoza4@purevolume.com,"[""c36205db-de26-49f7-a2b5-1de097f47eb6"",""8954fd2a-43fb-4e5f-bb90-480ec7a0fd71"",""46a221f4-1184-48dd-88f8-eeb91ef78f16"",""c2bc8b07-ec35-44fc-b9ee-10f6ccfdf96a"",""3cf98b3d-71af-45cb-bf0b-46b77defb3a4""]"
+b870e9c5-ce4d-4f4f-847d-654141ead87d,Francyne,Boobyer,fboobyer5@nationalgeographic.com,"[""2203ed4a-faef-4ac8-8f55-74f832b137bb""]"
+712e03a7-bf63-4809-b039-c25b3d58bdc9,Hunfredo,Entwhistle,hentwhistle6@wordpress.org,[]
+907a7fbd-aa92-4f68-a4c5-886e5d5e6dc5,Gloria,Unsworth,gunsworth7@nytimes.com,"[""3cf98b3d-71af-45cb-bf0b-46b77defb3a4"",""2203ed4a-faef-4ac8-8f55-74f832b137bb""]"
+ab0c4331-65c3-4d2f-9013-91a92b13a3b3,Marwin,Marquiss,mmarquiss8@cam.ac.uk,"[""031334e7-1c11-4891-9df3-ec7fc58be8a8"",""8954fd2a-43fb-4e5f-bb90-480ec7a0fd71""]"
+4d04c221-29dc-48a9-a9fe-2b5624c5592d,Jenilee,Cisland,jcisland9@reuters.com,"[""3034fcb2-ddef-45e3-b3a6-cb953d94e999"",""c36205db-de26-49f7-a2b5-1de097f47eb6"",""3cf98b3d-71af-45cb-bf0b-46b77defb3a4"",""46a221f4-1184-48dd-88f8-eeb91ef78f16"",""1de585e0-81fc-4663-adfe-59d63d28c0cb""]"
+e3b85900-e261-4baf-a4b3-b10e79dde8bf,Amberly,Moxson,amoxsona@rakuten.co.jp,"[""2203ed4a-faef-4ac8-8f55-74f832b137bb"",""3cf98b3d-71af-45cb-bf0b-46b77defb3a4"",""031334e7-1c11-4891-9df3-ec7fc58be8a8"",""c2bc8b07-ec35-44fc-b9ee-10f6ccfdf96a"",""46a221f4-1184-48dd-88f8-eeb91ef78f16""]"
+5ff1f7e9-3781-4b4e-bb81-859e89ea1b2d,Milli,Piddington,mpiddingtonb@so-net.ne.jp,"[""031334e7-1c11-4891-9df3-ec7fc58be8a8"",""c2bc8b07-ec35-44fc-b9ee-10f6ccfdf96a"",""c36205db-de26-49f7-a2b5-1de097f47eb6"",""46a221f4-1184-48dd-88f8-eeb91ef78f16"",""f5b6d093-d8f3-4ac6-8e50-bd2350871ee2""]"
+6022afd9-7e4c-4cb4-a4f6-b27362f49d76,Milicent,Ferreres,mferreresc@infoseek.co.jp,"[""8954fd2a-43fb-4e5f-bb90-480ec7a0fd71"",""3cf98b3d-71af-45cb-bf0b-46b77defb3a4""]"
+eb0a1847-08b8-4099-98c8-b6b63af8859a,Carline,Bohler,cbohlerd@dmoz.org,"[""46a221f4-1184-48dd-88f8-eeb91ef78f16"",""031334e7-1c11-4891-9df3-ec7fc58be8a8"",""c2bc8b07-ec35-44fc-b9ee-10f6ccfdf96a"",""3cf98b3d-71af-45cb-bf0b-46b77defb3a4""]"
+708f4ace-b5c3-477f-bd43-e19982e61831,Damara,Janikowski,djanikowskie@usatoday.com,"[""3034fcb2-ddef-45e3-b3a6-cb953d94e999"",""c36205db-de26-49f7-a2b5-1de097f47eb6""]"
