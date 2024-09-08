@@ -20,6 +20,8 @@ console.log(process.env.NODE_ENV);
 
 import app from './app.js';
 
+export default app;
+
 const DB = process.env.DATABASE.replace(
   '<PASSWORD>',
   process.env.DATABASE_PASSWORD,

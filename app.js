@@ -5,8 +5,8 @@ import ExpressMongoSanitize from 'express-mongo-sanitize';
 import hpp from 'hpp';
 import compression from 'compression';
 import morgan from 'morgan';
-import globalErrorMiddleware from '#middleware/globalErrorMiddleware.js';
 import AppError from '#utils/appErrors.js';
+import globalErrorMiddleware from '#middleware/globalErrorMiddleware.js';
 
 const app = express();
 
