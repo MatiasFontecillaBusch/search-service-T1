@@ -2,7 +2,7 @@ import { model, Schema } from 'mongoose';
 
 const gradeSchema = new Schema({
   _id: {
-    type: String,
+    type: Schema.Types.UUID,
     required: true,
     immutable: true,
   },

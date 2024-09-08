@@ -1,8 +1,20 @@
 import { Router } from 'express';
-import { getAllRestrictions } from '#controllers/restrictionsController.js';
+import {
+  createRestriction,
+  deleteRestriction,
+  getAllRestrictions,
+  getRestrictionById,
+  updateRestriction,
+} from '#controllers/restrictionsController.js';
 
 const restrictionsRouter = Router();
 
-restrictionsRouter.route('/').get(getAllRestrictions);
+restrictionsRouter.route('/').get(getAllRestrictions).post(createRestriction);
+
+restrictionsRouter
+  .route('/:id')
+  .get(getRestrictionById)
+  .patch(updateRestriction)
+  .delete(deleteRestriction);
 
 export default restrictionsRouter;

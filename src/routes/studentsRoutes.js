@@ -1,8 +1,20 @@
 import { Router } from 'express';
-import { getAllStudents } from '#controllers/studentsController.js';
+import {
+  createStudent,
+  deleteStudent,
+  getAllStudents,
+  getStudentById,
+  updateStudent,
+} from '#controllers/studentsController.js';
 
 const studentsRouter = Router();
 
-studentsRouter.route('/').get(getAllStudents);
+studentsRouter.route('/').get(getAllStudents).post(createStudent);
+
+studentsRouter
+  .route('/:id')
+  .get(getStudentById)
+  .patch(updateStudent)
+  .delete(deleteStudent);
 
 export default studentsRouter;
