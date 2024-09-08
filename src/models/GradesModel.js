@@ -11,16 +11,16 @@ const gradeSchema = new Schema({
   value: Number,
   comment: String,
   subjectId: {
-    type: Schema.Types.ObjectId,
+    type: String,
     ref: 'subjects',
     required: true,
   },
   studentId: {
-    type: Schema.Types.ObjectId,
+    type: String,
     ref: 'students',
     required: true,
   },
 });
 
-const Grade = model('grades', gradeSchema);
-export default Grade;
+const Grades = model('grades', gradeSchema);
+export default Grades;

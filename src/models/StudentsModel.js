@@ -16,7 +16,7 @@ const studentSchema = new Schema({
   },
   restrictionsIds: [
     {
-      type: Schema.Types.ObjectId,
+      type: String,
       ref: 'restrictions',
     },
   ],

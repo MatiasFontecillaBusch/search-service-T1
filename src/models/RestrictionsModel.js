@@ -15,5 +15,5 @@ const restrictionSchema = new Schema({
   },
 });
 
-const Restriction = model('restrictions', restrictionSchema);
-export default Restriction;
+const Restrictions = model('restrictions', restrictionSchema);
+export default Restrictions;
