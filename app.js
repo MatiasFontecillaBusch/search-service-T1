@@ -23,7 +23,17 @@ app.use(express.json());
 
 // 1) GLOBAL MIDDLEWARES
 // Implement CORS
-app.use(cors());
+app.use(
+  cors({
+    origin: (origin, callback) => {
+      if (!origin || origin === process.env.CORS_ALLOWED_IP) {
+        callback(null, true);
+      } else {
+        callback(new Error('No permitido por CORS'));
+      }
+    },
+  }),
+);
 
 app.use(morgan('dev'));
 

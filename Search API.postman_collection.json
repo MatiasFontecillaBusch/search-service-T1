@@ -1,0 +1,498 @@
+{
+	"info": {
+		"_postman_id": "6c02f453-c0c5-461b-90f3-ba4aeacf88a9",
+		"name": "Search API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31440030"
+	},
+	"item": [
+		{
+			"name": "Students",
+			"item": [
+				{
+					"name": "Get All Students",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/students",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"students"
+							],
+							"query": [
+								{
+									"key": "populateFields",
+									"value": "restrictions,grades",
+									"description": "Pobla los datos, puede ser restrictions y grades",
+									"disabled": true
+								},
+								{
+									"key": "search",
+									"value": "",
+									"description": "Buscar por nombre, correo y uuid",
+									"disabled": true
+								},
+								{
+									"key": "fields",
+									"value": "_id",
+									"description": "filtra los campos, solo se obtendran los ingresados, no filtra por campos populados",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Student",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"_id\": \"c6498095-dab2-4d4b-86ec-f47f1afead79\",\n    \"uuid\": \"c6498095-dab2-4d4b-86ec-f47f1afead79\",\n    \"name\": \"Abel\",\n    \"lastName\": \"Cain\",\n    \"email\": \"kcaiasdvcbn1@dot.gov\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/students",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"students"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Read Student",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/students/ccd66d7a-6166-4c58-8722-085d4144a079",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"students",
+								"ccd66d7a-6166-4c58-8722-085d4144a079"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Student",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"restrictions\": [\n        \"f5b6d093-d8f3-4ac6-8e50-bd2350871ee2\"\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/students/ccd66d7a-6166-4c58-8722-085d4144a079",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"students",
+								"ccd66d7a-6166-4c58-8722-085d4144a079"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Student",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/students/id",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"students",
+								"id"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Subjects",
+			"item": [
+				{
+					"name": "Get All Subjects",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/subjects",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"subjects"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Subject",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"_id\": \"2b2e1e52-0630-4e47-883e-3c7474d7dc55\",\n    \"uuid\": \"2b2e1e52-0630-4e47-883e-3c7474d7dc55\",\n    \"name\": \"Arquitectura de Software\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/subjects",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"subjects"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Read Subject",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/subjects/2b2e1e52-0630-4e47-883e-3c7474d7dc55",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"subjects",
+								"2b2e1e52-0630-4e47-883e-3c7474d7dc55"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Subject",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Redes de Computadores\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/subjects/2b2e1e52-0630-4e47-883e-3c7474d7dc55",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"subjects",
+								"2b2e1e52-0630-4e47-883e-3c7474d7dc55"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Subject",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/subjects/id",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"subjects",
+								"id"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Restrictions",
+			"item": [
+				{
+					"name": "Get All Restrictions",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/restrictions",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"restrictions"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "1de585e0",
+									"description": "Permite buscar por razon o uuid",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Restriction",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"_id\":\"8dac70f5-385f-4ed5-945c-3b53408cddbf\",\n    \"uuid\":\"8dac70f5-385f-4ed5-945c-3b53408cddbf\",\n    \"restrictionReason\": \"Proyeccion sin tilde\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/restrictions",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"restrictions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Read Restriction",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/restrictions/8dac70f5-385f-4ed5-945c-3b53408cddbf",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"restrictions",
+								"8dac70f5-385f-4ed5-945c-3b53408cddbf"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Restriction",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"restrictionReason\": \"Proyección con tilde\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/restrictions/8dac70f5-385f-4ed5-945c-3b53408cddbf",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"restrictions",
+								"8dac70f5-385f-4ed5-945c-3b53408cddbf"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Restriction",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/restrictions/id",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"restrictions",
+								"id"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Grades",
+			"item": [
+				{
+					"name": "Get All Grades",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/grades?value[gte]=90&value[lte]=95&sort=-value",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"grades"
+							],
+							"query": [
+								{
+									"key": "value[gte]",
+									"value": "90",
+									"description": "Filtra por el valor de la nota, permite gte, gt, lte y lt, se puede repetir"
+								},
+								{
+									"key": "value[lte]",
+									"value": "95"
+								},
+								{
+									"key": "sort",
+									"value": "-value",
+									"description": "Permite ordenar segun la nota, '-' decendente, sin '-' ascendente"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Grade",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"_id\": \"ce6cf573-0dbe-4876-8c3c-ab8bf7d41dcd\",\n    \"name\": \"Catedra 1\",\n    \"value\": 70.0,\n    \"comment\": \"Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis. Sed ante.\",\n    \"subject\": \"2b2e1e52-0630-4e47-883e-3c7474d7dc55\",\n    \"student\":\"ccd66d7a-6166-4c58-8722-085d4144a079\"\n}\n    \n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/grades",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"grades"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Read Grade",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/grades/ce6cf573-0dbe-4876-8c3c-ab8bf7d41dcd",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"grades",
+								"ce6cf573-0dbe-4876-8c3c-ab8bf7d41dcd"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Grade",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"value\":10.0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/grades/ce6cf573-0dbe-4876-8c3c-ab8bf7d41dcd",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"grades",
+								"ce6cf573-0dbe-4876-8c3c-ab8bf7d41dcd"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Grade",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/grades/id",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"grades",
+								"id"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
