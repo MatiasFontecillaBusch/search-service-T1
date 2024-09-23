@@ -26,7 +26,11 @@ app.use(express.json());
 app.use(
   cors({
     origin: (origin, callback) => {
-      if (!origin || origin === process.env.CORS_ALLOWED_IP) {
+      if (
+        !origin ||
+        origin === '0.0.0.0' ||
+        origin === process.env.CORS_ALLOWED_IP
+      ) {
         callback(null, true);
       } else {
         callback(new Error('No permitido por CORS'));
