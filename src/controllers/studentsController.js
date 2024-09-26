@@ -84,3 +84,37 @@ export const updateStudent = catchAsync(async (req, res, next) => {
 });
 
 export const deleteStudent = deleteOneFactory(Students);
+
+export const removeStudentRestriction = catchAsync(async (req, res, next) => {
+  const { restrictionUUID } = req.params;
+  const student = await Students.findById(req.params.id);
+
+  if (!student) {
+    return next(new AppError('No document found with that ID', 404));
+  }
+
+  await student.removeRestrictionByUUID(restrictionUUID);
+
+  res.status(200).json({
+    status: 'success',
+    data: {
+      student,
+    },
+  });
+});
+
+export const removeRestrictionFromAllStudents = catchAsync(
+  async (req, res, next) => {
+    const { restrictionUUID } = req.params;
+
+    const updatedStudents =
+      await Students.removeRestrictionFromAll(restrictionUUID);
+
+    res.status(200).json({
+      status: 'success',
+      data: {
+        students: updatedStudents,
+      },
+    });
+  },
+);
