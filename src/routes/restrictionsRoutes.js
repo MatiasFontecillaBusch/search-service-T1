@@ -3,6 +3,7 @@ import {
   createRestriction,
   deleteRestriction,
   getAllRestrictions,
+  getAllRestrictionsByStudents,
   getRestrictionById,
   updateRestriction,
 } from '#controllers/restrictionsController.js';
@@ -10,6 +11,8 @@ import {
 const restrictionsRouter = Router();
 
 restrictionsRouter.route('/').get(getAllRestrictions).post(createRestriction);
+
+restrictionsRouter.route('/students').get(getAllRestrictionsByStudents);
 
 restrictionsRouter
   .route('/:id')

@@ -13,7 +13,14 @@
 					"name": "Get All Students",
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Origin",
+								"value": "test.com",
+								"type": "text",
+								"disabled": true
+							}
+						],
 						"url": {
 							"raw": "{{URL}}/students",
 							"host": [
@@ -78,13 +85,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{URL}}/students/ccd66d7a-6166-4c58-8722-085d4144a079",
+							"raw": "{{URL}}/students/e26555a9-f157-4316-9708-c26b9a24cf61",
 							"host": [
 								"{{URL}}"
 							],
 							"path": [
 								"students",
-								"ccd66d7a-6166-4c58-8722-085d4144a079"
+								"e26555a9-f157-4316-9708-c26b9a24cf61"
 							]
 						}
 					},
@@ -97,7 +104,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"restrictions\": [\n        \"f5b6d093-d8f3-4ac6-8e50-bd2350871ee2\"\n    ]\n}",
+							"raw": "{\n    \"restrictions\": [\n        \"fdcd6487-06f3-452a-8049-31cbe202b1bb\"\n    ]\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -105,13 +112,13 @@
 							}
 						},
 						"url": {
-							"raw": "{{URL}}/students/ccd66d7a-6166-4c58-8722-085d4144a079",
+							"raw": "{{URL}}/students/e26555a9-f157-4316-9708-c26b9a24cf61",
 							"host": [
 								"{{URL}}"
 							],
 							"path": [
 								"students",
-								"ccd66d7a-6166-4c58-8722-085d4144a079"
+								"e26555a9-f157-4316-9708-c26b9a24cf61"
 							]
 						}
 					},
@@ -252,6 +259,32 @@
 			"name": "Restrictions",
 			"item": [
 				{
+					"name": "Search Restrictions",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/restrictions/students",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"restrictions",
+								"students"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "1de585e0",
+									"description": "Permite buscar por razon o uuid",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Get All Restrictions",
 					"request": {
 						"method": "GET",
@@ -267,7 +300,7 @@
 							"query": [
 								{
 									"key": "search",
-									"value": "1de585e0",
+									"value": "fdcd6487-06f3-452a-8049-31cbe202b1bb",
 									"description": "Permite buscar por razon o uuid",
 									"disabled": true
 								}
