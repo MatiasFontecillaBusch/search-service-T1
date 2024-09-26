@@ -1,9 +1,9 @@
 import createOneFactory from '#factories/createOneFactory.js';
 import deleteOneFactory from '#factories/deleteOneFactory.js';
 import getOneFactory from '#factories/getOneFactory.js';
-import updateOneFactory from '#factories/updateOneFactory.js';
 import Students from '#models/studentsModel.js';
 import APIFeatures from '#utils/apiFeatures.js';
+import AppError from '#utils/appErrors.js';
 import catchAsync from '#utils/catchAsync.js';
 
 export const getAllStudents = catchAsync(async (req, res, next) => {
@@ -58,6 +58,29 @@ export const getStudentById = getOneFactory(Students, [
 
 export const createStudent = createOneFactory(Students);
 
-export const updateStudent = updateOneFactory(Students);
+export const updateStudent = catchAsync(async (req, res, next) => {
+  const { body } = req;
+  const student = await Students.findById(req.params.id);
+
+  if (!student) {
+    return next(new AppError('No document found with that ID', 404));
+  }
+
+  if (body.restrictions) {
+    student.restrictions.push(...body.restrictions);
+    delete body.restrictions;
+  }
+
+  Object.assign(student, body);
+
+  await student.save();
+
+  res.status(200).json({
+    status: 'success',
+    data: {
+      student,
+    },
+  });
+});
 
 export const deleteStudent = deleteOneFactory(Students);

@@ -31,7 +31,6 @@ app.use(
         origin === '0.0.0.0' ||
         origin === process.env.CORS_ALLOWED_IP
       ) {
-        console.log({ origin });
         callback(null, true);
       } else {
         callback(new Error('No permitido por CORS'));
