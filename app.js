@@ -8,7 +8,6 @@ import morgan from 'morgan';
 import AppError from '#utils/appErrors.js';
 import globalErrorMiddleware from '#middleware/globalErrorMiddleware.js';
 import studentsRouter from '#routes/studentsRoutes.js';
-import subjectsRouter from '#routes/subjectsRoutes.js';
 import restrictionsRouter from '#routes/restrictionsRoutes.js';
 import gradesRouter from '#routes/gradesRoutes.js';
 
@@ -66,7 +65,6 @@ app.get('/', (req, res) => {
 
 app.use('/students', studentsRouter);
 app.use('/grades', gradesRouter);
-app.use('/subjects', subjectsRouter);
 app.use('/restrictions', restrictionsRouter);
 
 app.all('*', (req, res, next) => {

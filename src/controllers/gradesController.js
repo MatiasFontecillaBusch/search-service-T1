@@ -11,7 +11,7 @@ export const getAllGrades = catchAsync(async (req, res, next) => {
 
   // Fetch grades along with the student data
   const features = new APIFeatures(
-    Grades.find(filter).populate('student').populate('subject').lean(),
+    Grades.find(filter).populate('student').lean(),
     req.query,
   )
     .filter(Grades.numericFields ? Grades.numericFields() : [])
@@ -22,9 +22,7 @@ export const getAllGrades = catchAsync(async (req, res, next) => {
   const grades = await features.query;
 
   const groupedByStudent = grades.reduce((acc, grade) => {
-    const { student } = grade;
-    const { subject } = grade;
-
+    const { student, subjectName } = grade;
     if (!acc[student.uuid]) {
       acc[student.uuid] = {
         _id: student._id,
@@ -37,7 +35,7 @@ export const getAllGrades = catchAsync(async (req, res, next) => {
 
     acc[student.uuid].grades.push({
       _id: grade._id,
-      subjectName: subject ? subject.name : 'No subject',
+      subjectName: subjectName || 'No subject',
       gradeName: grade.name,
       gradeValue: grade.value,
       comment: grade.comment,

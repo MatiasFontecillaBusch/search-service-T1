@@ -13,7 +13,7 @@ const restrictionSchema = new Schema({
     immutable: true,
     unique: true,
   },
-  restrictionReason: { type: String, unique: true },
+  restrictionReason: { type: String },
   createdAt: {
     type: Date,
     default: Date.now,

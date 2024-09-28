@@ -9,11 +9,7 @@ const gradeSchema = new Schema({
   name: String,
   value: Number,
   comment: String,
-  subject: {
-    type: Schema.Types.UUID,
-    ref: 'subjects',
-    required: true,
-  },
+  subjectName: String,
   student: {
     type: Schema.Types.UUID,
     ref: 'students',

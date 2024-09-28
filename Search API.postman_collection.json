@@ -54,6 +54,25 @@
 					"response": []
 				},
 				{
+					"name": "Delete All Students Restrictions",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/students/restrictions/fdcd6487-06f3-452a-8049-31cbe202b1bb",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"students",
+								"restrictions",
+								"fdcd6487-06f3-452a-8049-31cbe202b1bb"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Create Student",
 					"request": {
 						"method": "POST",
@@ -112,13 +131,13 @@
 							}
 						},
 						"url": {
-							"raw": "{{URL}}/students/e26555a9-f157-4316-9708-c26b9a24cf61",
+							"raw": "{{URL}}/students/9fc0f9ba-ca96-473e-9d20-a899e4d997bd",
 							"host": [
 								"{{URL}}"
 							],
 							"path": [
 								"students",
-								"e26555a9-f157-4316-9708-c26b9a24cf61"
+								"9fc0f9ba-ca96-473e-9d20-a899e4d997bd"
 							]
 						}
 					},
@@ -141,113 +160,22 @@
 						}
 					},
 					"response": []
-				}
-			]
-		},
-		{
-			"name": "Subjects",
-			"item": [
-				{
-					"name": "Get All Subjects",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{URL}}/subjects",
-							"host": [
-								"{{URL}}"
-							],
-							"path": [
-								"subjects"
-							]
-						}
-					},
-					"response": []
 				},
 				{
-					"name": "Create Subject",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"_id\": \"2b2e1e52-0630-4e47-883e-3c7474d7dc55\",\n    \"uuid\": \"2b2e1e52-0630-4e47-883e-3c7474d7dc55\",\n    \"name\": \"Arquitectura de Software\"\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{URL}}/subjects",
-							"host": [
-								"{{URL}}"
-							],
-							"path": [
-								"subjects"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Read Subject",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{URL}}/subjects/2b2e1e52-0630-4e47-883e-3c7474d7dc55",
-							"host": [
-								"{{URL}}"
-							],
-							"path": [
-								"subjects",
-								"2b2e1e52-0630-4e47-883e-3c7474d7dc55"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Update Subject",
-					"request": {
-						"method": "PATCH",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"name\":\"Redes de Computadores\"\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{URL}}/subjects/2b2e1e52-0630-4e47-883e-3c7474d7dc55",
-							"host": [
-								"{{URL}}"
-							],
-							"path": [
-								"subjects",
-								"2b2e1e52-0630-4e47-883e-3c7474d7dc55"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Delete Subject",
+					"name": "Delete Student Restriction",
 					"request": {
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{URL}}/subjects/id",
+							"raw": "{{URL}}/students/e26555a9-f157-4316-9708-c26b9a24cf61/restrictions/fdcd6487-06f3-452a-8049-31cbe202b1bb",
 							"host": [
 								"{{URL}}"
 							],
 							"path": [
-								"subjects",
-								"id"
+								"students",
+								"e26555a9-f157-4316-9708-c26b9a24cf61",
+								"restrictions",
+								"fdcd6487-06f3-452a-8049-31cbe202b1bb"
 							]
 						}
 					},
