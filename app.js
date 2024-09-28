@@ -10,6 +10,7 @@ import globalErrorMiddleware from '#middleware/globalErrorMiddleware.js';
 import studentsRouter from '#routes/studentsRoutes.js';
 import restrictionsRouter from '#routes/restrictionsRoutes.js';
 import gradesRouter from '#routes/gradesRoutes.js';
+import { deleteAll } from '#controllers/deleteController.js';
 
 const app = express();
 
@@ -66,6 +67,7 @@ app.get('/', (req, res) => {
 app.use('/students', studentsRouter);
 app.use('/grades', gradesRouter);
 app.use('/restrictions', restrictionsRouter);
+app.delete('/delete-all-db', deleteAll);
 
 app.all('*', (req, res, next) => {
   next(
