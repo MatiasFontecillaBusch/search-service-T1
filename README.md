@@ -1,9 +1,3 @@
-Aquí tienes un ejemplo de un README en español para una API desarrollada con Express.js. Este documento incluye secciones típicas que puedes personalizar según tus necesidades.
-
----
-
-# Documentación de la API
-
 ## Descripción
 
 Esta API está construida con **Express.js** y permite gestionar estudiantes, sus notas y restricciones. Proporciona endpoints para realizar operaciones CRUD (Crear, Leer, Actualizar y Eliminar) en los recursos de estudiantes, notas y restricciones.
@@ -57,4 +51,7 @@ Para iniciar la API, ejecuta el siguiente comando:
 npm start
 ```
 
-La API se ejecutará en `http://localhost:3000`.
+La API se ejecutará en `http://localhost:5000`.
+
+## Documentación
+La documentación de la API se encuentra en el archivo `Search API.postman_collection.json`, esta fue hecha con Postman.
