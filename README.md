@@ -1,6 +1,6 @@
 ## Descripción
 
-Esta API está construida con **Express.js** y permite gestionar estudiantes, sus notas y restricciones. Proporciona endpoints para realizar operaciones CRUD (Crear, Leer, Actualizar y Eliminar) en los recursos de estudiantes, notas y restricciones.
+Esta API está construida con **Express.js** y permite buscar estudiantes, sus notas y restricciones. 
 
 ## Requisitos Previos
 
