@@ -33,10 +33,6 @@ export const getAllStudents = catchAsync(async (req, res, next) => {
     if (fieldsToPopulate.includes('grades')) {
       query = query.populate({
         path: 'grades',
-        populate: {
-          path: 'subject',
-          model: 'subjects',
-        },
       });
     }
   }
